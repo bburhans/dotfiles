@@ -1,0 +1,22 @@
+[user]
+	name = Benjamin P. Burhans
+	email = benburhans@gmail.com
+[core]
+	editor = vim
+[color]
+	branch = always
+	diff = always
+	decorate = always
+	grep = always
+	interactive = always
+	showbranch = always
+	status = always
+	ui = always
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+[alias]
+	st = status
+	l = log --format=\"%C(auto)%h %Cgreen%ad%Creset %s %C(yellow)(%an <%ae>)%Creset\" --graph --date=format:\"%c\"
+ 
