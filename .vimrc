@@ -37,6 +37,9 @@ nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 nnoremap Q @q
 
 nnoremap Y y$
+if has ('unnamedplus')
+  set clipboard=unnamedplus,unnamed
+endif
 
 "function! SuperCleverTab()
 "	if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
