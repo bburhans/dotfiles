@@ -23,6 +23,7 @@ set lz
 set foldmethod=syntax
 set foldnestmax=2
 set foldlevelstart=1
+let javaScript_fold=1
 
 " This behaviour can be approximated, but not precisely duplicated, with [zk and ]zj instead
 map ]] m'zcjmm''zo'm
@@ -37,7 +38,7 @@ nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 nnoremap Q @q
 
 nnoremap Y y$
-if has ('unnamedplus')
+if has ('clipboard')
   set clipboard=unnamedplus,unnamed
 endif
 
