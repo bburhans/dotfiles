@@ -1,6 +1,8 @@
 cd ~
 set autochdir
 
+set encoding=utf-8
+
 set nobackup
 
 set backspace=indent,eol,start
