@@ -1,0 +1,21 @@
+BoldAsFont=no
+Transparency=off
+CursorType=block
+Columns=209
+Rows=65
+OpaqueWhenFocused=no
+FontSmoothing=full
+ScrollbackLines=20000
+CopyAsHTML=16777216
+RightClickAction=paste
+MiddleClickAction=void
+CopyAsRTF=yes
+Locale=C
+Charset=UTF-8
+Font=Lucida Console
+FontHeight=10
+Language=en_US
+BellFlash=yes
+ThemeFile=mintty
+TrimSelection=false
+
