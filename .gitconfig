@@ -20,3 +20,5 @@
 	st = status
 	l = log --format=\"%C(auto)%h %Cgreen%ad%Creset %s %C(yellow)(%an <%ae>)%Creset\" --graph --date=format:\"%c\"
  
+[winUpdater]
+	recentlySeenVersion = 2.21.0.windows.1
