@@ -9,3 +9,21 @@ alias npminit="[[ ! -e package.json ]] && echo '{\"private\": true}' >package.js
 
 complete -d cd
 
+
+case "$TERM" in
+xterm*)
+  if [ -x "`which winpty`" ]; then
+        # The following programs are known to require a Win32 Console
+        # for interactive usage, therefore let's launch them through winpty
+        # when run inside `mintty`.
+        for name in node ipython php php5 psql python2.7 python3 python2 python py perl
+        do
+                case "$(type -p "$name".exe 2>/dev/null)" in
+                ''|/usr/bin/*) continue;;
+                esac
+                alias $name="winpty $name.exe"
+        done
+  fi
+  ;;
+esac
+

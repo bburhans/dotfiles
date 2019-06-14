@@ -6,7 +6,7 @@ Rows=65
 OpaqueWhenFocused=no
 FontSmoothing=full
 ScrollbackLines=20000
-CopyAsHTML=16777216
+CopyAsHTML=no
 RightClickAction=paste
 MiddleClickAction=void
 CopyAsRTF=yes
@@ -17,5 +17,5 @@ FontHeight=10
 Language=en_US
 BellFlash=yes
 ThemeFile=mintty
-TrimSelection=false
+TrimSelection=yes
 
