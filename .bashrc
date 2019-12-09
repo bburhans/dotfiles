@@ -14,7 +14,7 @@ alias less='less -qR'
 alias ls='ls -F --color'
 alias ll='ls -alF --color --time-style=long-iso'
 alias dotfiles='git --git-dir="$HOME"/dotfiles --work-tree="$HOME"'
-alias gitignore='[[ ! -e .gitignore ]] && curl -o.gitignore https://www.gitignore.io/api/git,vim,node,visualstudiocode'
+alias gitignore='[[ ! -e .gitignore ]] && curl -o.gitignore https://www.gitignore.io/api/git,vim,node,visualstudiocode,dotenv'
 alias npminit="[[ ! -e package.json ]] && echo '{\"private\": true}' >package.json"
 
 complete -d cd
