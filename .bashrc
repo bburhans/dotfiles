@@ -72,3 +72,7 @@ PS1="$PS1"'\n'                 # new line
 PS1="$PS1"'\$ '                # prompt ($ or #)
 
 PROMPT_COMMAND="__git_ps1 '\[\033]0;`basename \"\$SHELL\"`: \w\007\]\n\[\033[36m\]\u@\h \[\033[33m\]\w\[\033[35m\] ' '\[\033[0m\]\n\\\$ '"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
