@@ -4,6 +4,8 @@ case $- in
       *) return;;
 esac
 
+umask 0077
+
 HISTSIZE=10000
 HISTFILESIZE=10000
 HISTTIMEFORMAT='%F %T '
@@ -76,3 +78,4 @@ PROMPT_COMMAND="__git_ps1 '\[\033]0;`basename \"\$SHELL\"`: \w\007\]\n\[\033[36m
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
