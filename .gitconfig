@@ -26,3 +26,5 @@
 	helper = store
 [log]
 	date = iso
+[init]
+	defaultBranch = main
