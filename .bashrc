@@ -29,7 +29,7 @@ alias ll='ls -alF --color --time-style=long-iso --show-control-chars'
 alias dotfiles='git --git-dir="$HOME"/dotfiles --work-tree="$HOME"'
 alias gitignore="[[ ! -e .gitignore ]] && curl -sL https://www.gitignore.io/api/git,vim,node,visualstudiocode,dotenv |grep -vi '^\s*#.*\btoptal\b' >.gitignore"
 alias npminit="[[ ! -e package.json ]] && echo '{\"private\": true}' >package.json"
-alias path="echo \"$PATH\" |cut -d: --output-delimiter=$'\n' -f1-"
+alias path='echo "$PATH" |cut -d: --output-delimiter=$'\''\n'\'' -f1-'
 
 complete -d cd
 
@@ -64,9 +64,9 @@ PS1="$PS1"'\[\033[32m\]'       # green
 PS1="$PS1"'\u@\h '             # user@host<space>
 PS1="$PS1"'\[\033[33m\]'       # brownish yellow
 PS1="$PS1"'\w'                 # current working directory
-if test -f ~/.git-prompt.sh
+if test -f "$HOME/.git-prompt.sh"
 then
-  source ~/.git-prompt.sh
+  source "$HOME/.git-prompt.sh"
   PS1="$PS1"'\[\033[36m\]'  # cyan
   PS1="$PS1"'`__git_ps1`'   # bash function
 fi
@@ -81,8 +81,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '~/google-cloud-sdk/path.bash.inc' ]; then . '~/google-cloud-sdk/path.bash.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/path.bash.inc" ]; then . "$HOME/google-cloud-sdk/path.bash.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '~/google-cloud-sdk/completion.bash.inc' ]; then . '~/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]; then . "$HOME/google-cloud-sdk/completion.bash.inc"; fi
 
