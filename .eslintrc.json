@@ -1,10 +1,11 @@
 {
     "env": {
         "node": true,
-        "es6": true
+        "es2021": true
     },
+    "extends": "eslint:recommended",
     "parserOptions": {
-        "ecmaVersion": 8
+        "ecmaVersion": 12
     },
     "rules": {
         "no-const-assign": "warn",
@@ -16,7 +17,8 @@
         "valid-typeof": "warn",
         "no-use-before-define": ["error", "nofunc"],
         "semi": ["warn", "always"],
-        "no-cond-assign": ["warn", "always"]
+        "no-cond-assign": ["warn", "always"],
+        "array-callback-return": ["warn", { "checkForEach": true }]
     }
 }
 
