@@ -12,6 +12,8 @@ HISTTIMEFORMAT='%F %T '
 HISTCONTROL=ignoreboth
 shopt -s histappend histverify autocd checkwinsize
 
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
@@ -24,8 +26,13 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -v --interactive=once'
 alias less='less -qR'
-alias ls='ls -F --color --show-control-chars'
-alias ll='ls -alF --color --time-style=long-iso --show-control-chars'
+alias ls='ls -F --color=auto --show-control-chars'
+alias ll='ls -alF --color=auto --time-style=long-iso --show-control-chars'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 alias dotfiles='git --git-dir="$HOME"/dotfiles --work-tree="$HOME"'
 alias gitignore="[[ ! -e .gitignore ]] && curl -sL https://www.gitignore.io/api/git,vim,node,visualstudiocode,dotenv |grep -vi '^\s*#.*\btoptal\b' >.gitignore"
 alias npminit="[[ ! -e package.json ]] && echo '{\"private\": true}' >package.json"
@@ -58,7 +65,7 @@ GIT_PS1_SHOWCOLORHINTS=1
 
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-PS1='\[\033]0;`basename "$SHELL"`: \w\007\]' # set window title
+PS1='\[\033]0;`basename "$SHELL"`: \u@\h: \w\007\]' # set window title
 PS1="$PS1"'\n'                 # new line
 PS1="$PS1"'\[\033[32m\]'       # green
 PS1="$PS1"'\u@\h '             # user@host<space>
@@ -85,4 +92,6 @@ if [ -f "$HOME/google-cloud-sdk/path.bash.inc" ]; then . "$HOME/google-cloud-sdk
 
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]; then . "$HOME/google-cloud-sdk/completion.bash.inc"; fi
+
+mesg n 2> /dev/null || true
 
