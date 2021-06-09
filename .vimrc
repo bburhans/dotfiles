@@ -17,6 +17,7 @@ set ruler
 set nu
 set hls is
 set dip=filler,context:3,vertical
+set background=dark
 
 filetype indent on
 filetype plugin on
