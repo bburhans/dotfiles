@@ -93,5 +93,8 @@ if [ -f "$HOME/google-cloud-sdk/path.bash.inc" ]; then . "$HOME/google-cloud-sdk
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]; then . "$HOME/google-cloud-sdk/completion.bash.inc"; fi
 
+SFDX_AC_BASH_SETUP_PATH="$HOME/.cache/sfdx/autocomplete/bash_setup";
+test -f "$SFDX_AC_BASH_SETUP_PATH" && source "$SFDX_AC_BASH_SETUP_PATH";
+
 mesg n 2> /dev/null || true
 
