@@ -25,3 +25,5 @@
 	date = iso
 [init]
 	defaultBranch = main
+[user]
+	useConfigOnly = true
