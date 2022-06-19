@@ -27,3 +27,8 @@
 	defaultBranch = main
 [user]
 	useConfigOnly = true
+[credential "github.com"]
+	useHttpPath = true
+[pull]
+	rebase = true
+
