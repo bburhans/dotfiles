@@ -37,6 +37,7 @@ alias dotfiles='git --git-dir="$HOME"/dotfiles --work-tree="$HOME"'
 alias gitignore="[[ ! -e .gitignore ]] && curl -sL https://www.gitignore.io/api/git,vim,node,visualstudiocode,dotenv |grep -vi '^\s*#.*\btoptal\b' >.gitignore"
 alias npminit="[[ ! -e package.json ]] && echo '{\"private\": true}' >package.json"
 alias path='echo "$PATH" |cut -d: --output-delimiter=$'\''\n'\'' -f1-'
+alias tsc='tsc --target es2021 --strict --module es2022 --allowUnusedLabels false --allowUnreachableCode false --exactOptionalPropertyTypes --noFallthroughCasesInSwitch --esModuleInterop --noImplicitOverride --noImplicitReturns --noPropertyAccessFromIndexSignature --noUncheckedIndexedAccess --noUnusedLocals --noUnusedParameters --importsNotUsedAsValues error --checkJs --skipLibCheck --noEmitOnError'
 
 complete -d cd
 
